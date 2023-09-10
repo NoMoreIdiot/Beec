@@ -783,7 +783,7 @@ else:
     qb_client.app_set_preferences(qb_opt)
 
 log_info("Creating client from BOT_TOKEN")
-user = tgClient('user', TELEGRAM_API, TELEGRAM_HASH, session_string=USER_SESSION_STRING,
+bot = tgClient('bot', TELEGRAM_API, TELEGRAM_HASH, session_string=USER_SESSION_STRING,
                  workers=1000, parse_mode=enums.ParseMode.HTML, no_updates=True).start()
 bot_loop = bot.loop
 bot_name = bot.me.username
